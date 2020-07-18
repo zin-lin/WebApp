@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+
+
+ <html>
+   <head>
+    <title>
+       HOME
+    </title>
+     </head>
+
+
+     <body>
+
+
+
+
+
+
+
+
+{% extends 'base.html'%}
+  {% block content%}
+  <hr/>
+</br>
+<p>WELCOME </p>
+<frameset cols= "25%">
+<frame name= "left" src= "d:/MYMATE.ver.1.0/RegisterMymate.py"/>
+<noframes><span style="font-family:Times; color:red">No Frames</span></noframes>
+</frameset> 
+
+<p><span style="font-family:Consolas;color:#40E0D0;"> This is Zin Lin Htun And I say Hello To the world.</span><br/>
+<hr/>
+
+</br>
+
+<table border= 1>
+
+<tr >
+<td colspan=2><span style="font-family:Times; color:red"> Learn Web Delvelopement</span></td>
+</tr>
+
+</span>
+
+<tr>
+<td>1)<span style="font-family:Times; color:blue"> Learn Python</span ></td>
+<td>2) <span style="font-family:Times; color:orange">Learn Java</span> </td>
+</tr>
+
+<tr>
+<td>1)<span style="font-family:Times; color:blue"> Learn Django</span ></td>
+<td>2) <span style="font-family:Times; color:orange">Learn Spring</span > </td>
+</tr>
+</table>
+
+</span>
+
+<br>
+<br>
+<br>
+
+
+{% for post in object_list %}
+
+
+
+<ul>
+<li><a href= "{% url 'article-detail' post.pk %}" <button type="button" class="btn btn-success">
+
+
+{{post.title}}</button> </a>-{{post.author.first_name}} {{post.author.last_name}} <br/><hr/>
+
+<span style= "font-family:Consolas;color:#40E0D0; " >
+...........
+</span>
+</li>
+
+<br>
+<!--<br>
+<br>-->
+
+{% endfor %}
+</ul>
+
+  {% endblock%}
+
+    <body>
+ </html>
+
+
+
+
